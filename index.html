@@ -4,8 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petualangan AI - Akidah Akhlak Kelas 6</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Kode Tampilan CSS Ditaruh Langsung Di Sini -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background-color: #f4f9ff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4A90E2, #50E3C2);
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+            border-radius: 0 0 25px 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .highlight-card {
+            border-left: 6px solid #4A90E2;
+            background-color: #eef6ff;
+        }
+
+        .mission-card {
+            position: relative;
+            border: 2px solid #e1e8ed;
+        }
+
+        .mission-badge {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #FF6B6B;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-family: inherit;
+            font-size: 1rem;
+            flex: 1;
+        }
+
+        .btn-link {
+            display: inline-block;
+            background-color: #4A90E2;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 5px 15px 0;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn-link:hover {
+            background-color: #357ABD;
+            transform: scale(1.02);
+        }
+
+        .prompt-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            border: 1px dashed #cccccc;
+        }
+
+        .code-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 70px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-family: inherit;
+            resize: none;
+            background-color: #fff;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .tutorial-box {
+            background: #fdfdfd;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 18px;
+            margin-top: 15px;
+        }
+
+        .step-list {
+            margin-left: 20px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .step-list li {
+            margin-bottom: 8px;
+        }
+
+        .welcome-text {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #2E7D32;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,13 +184,12 @@
     <header>
         <div class="container">
             <h1>🚀 Petualangan AI: Belajar Menahan Marah</h1>
-            <p>Mata Pelajaran: Akidah Akhlak Kelas 6 </p>
-            <p>Guru Mapel : Pak Taufiq </p>
-            <p>MI Da'watul Khoir Kebonsari</p>
+            <p>Mata Pelajaran: Akidah Akhlak Kelas 6 SD/MI</p>
+            <p style="font-size: 0.9rem; margin-top: 5px;">Guru Mapel: Pak Taufiq | MI Da'watul Khoir Kebonsari</p>
         </div>
     </header>
 
-    <!-- Input Nama & Kelas (Tanpa Login) -->
+    <!-- Input Nama & Kelas -->
     <section class="user-section container">
         <div class="card login-card">
             <h2>👋 Selamat Datang, Teman-teman!</h2>
@@ -40,7 +210,7 @@
         <div class="card highlight-card">
             <h2>📖 Materi Akidah Akhlak: Sifat Pemarah (Ghadhab)</h2>
             <p><strong>Ghadhab</strong> adalah sifat pemarah yang berasal dari godaan setan. Orang yang hebat bukanlah orang yang kuat bergulat, melainkan orang yang mampu <strong>menahan dirinya saat marah</strong>.</p>
-            <ul>
+            <ul style="margin-left: 20px; margin-top: 10px;">
                 <li>🔴 <strong>Dampak Marah:</strong> Merusak pertemanan, membuat wajah tampak menakutkan, dan dibenci Allah.</li>
                 <li>🟢 <strong>Cara Meredakan Marah:</strong> Membaca Ta'awudz (<i>A'udzubillahi minasy syaitanir rajim</i>), mengambil air wudu, dan merubah posisi tubuh.</li>
             </ul>
@@ -92,11 +262,10 @@
                 <h4>📖 Tutorial Step-by-Step PixVerse.ai:</h4>
                 <ol class="step-list">
                     <li>Klik tombol di atas untuk membuka web PixVerse AI.</li>
-                    <li>Klik tombol <strong>"Get Started"</strong> atau <strong>"Sign In"</strong> -> pilih <strong>Continue with Google</strong> (gunakan akun Gmail-mu).</li>
-                    <li>Di halaman utama, klik tombol <strong>"Create"</strong> di bagian atas.</li>
-                    <li>Pilih opsi <strong>"Image to Video"</strong> (Unggah Gambar).</li>
-                    <li>Upload <strong>Gambar 1 (Anak Marah)</strong> yang sudah diunduh dari Gemini tadi.</li>
-                    <li>Tempelkan (*paste*) prompt gerakan di bawah ini pada kolom description:</li>
+                    <li>Klik tombol <strong>"Get Started"</strong> atau <strong>"Sign In"</strong> -> pilih <strong>Continue with Google</strong>.</li>
+                    <li>Klik tombol <strong>"Create"</strong> -> pilih opsi <strong>"Image to Video"</strong>.</li>
+                    <li>Upload <strong>Gambar 1 (Anak Marah)</strong> dari Gemini.</li>
+                    <li>Tempelkan prompt gerakan berikut pada kolom deskripsi:</li>
                 </ol>
 
                 <div class="code-container">
@@ -104,9 +273,9 @@
                     <button onclick="copyPrompt('promptVideo')">📋 Salin Prompt Gerakan</button>
                 </div>
 
-                <ol class="step-list" start="7">
-                    <li>Klik tombol <strong>"Create" / "Generate"</strong> dan tunggu sebentar sampai videonya selesai dibuat.</li>
-                    <li>Klik tombol <strong>Download 📥</strong> untuk menyimpan video MP4 ke HP/Laptopmu.</li>
+                <ol class="step-list" start="6">
+                    <li>Klik <strong>"Create"</strong> dan tunggu videonya selesai.</li>
+                    <li>Klik <strong>Download 📥</strong> untuk menyimpan video MP4.</li>
                 </ol>
             </div>
         </div>
@@ -121,10 +290,9 @@
                 <h4>📖 Tutorial Step-by-Step Suno.com:</h4>
                 <ol class="step-list">
                     <li>Klik tombol di atas untuk membuka web Suno AI.</li>
-                    <li>Klik menu <strong>"Sign In" / "Sign Up"</strong> di kiri bawah -> pilih <strong>Continue with Google</strong>.</li>
-                    <li>Setelah masuk, klik menu <strong>"Create"</strong> di panel sebelah kiri.</li>
-                    <li>Nyalakan sakelar <strong>"Custom Mode"</strong> di bagian atas hingga berwarna hijau/aktif.</li>
-                    <li>Salin dan tempel <strong>Style of Music</strong> dan <strong>Lyrics</strong> di bawah ini ke kolom yang sesuai:</li>
+                    <li>Klik <strong>"Sign In"</strong> di kiri bawah -> pilih <strong>Continue with Google</strong>.</li>
+                    <li>Klik menu <strong>"Create"</strong> di sebelah kiri -> nyalakan sakelar <strong>"Custom Mode"</strong>.</li>
+                    <li>Salin dan tempel Style of Music & Lyrics di bawah ini:</li>
                 </ol>
 
                 <div class="prompt-box">
@@ -153,10 +321,9 @@ Kita ciptakan damai bersama!
                     </div>
                 </div>
 
-                <ol class="step-list" start="6">
-                    <li>Klik tombol kuning <strong>"Create"</strong> di bagian bawah.</li>
-                    <li>Suno akan membuat 2 pilihan lagu. Dengarkan, lalu pilih salah satu yang paling kamu sukai.</li>
-                    <li>Klik titik tiga <strong>(...)</strong> di samping lagu -> pilih <strong>Download</strong> -> klik <strong>Audio (MP3)</strong>.</li>
+                <ol class="step-list" start="5">
+                    <li>Klik tombol kuning <strong>"Create"</strong>.</li>
+                    <li>Dengarkan lagu hasil buatannya, klik titik tiga <strong>(...)</strong> -> pilih <strong>Download</strong> -> <strong>Audio (MP3)</strong>.</li>
                 </ol>
             </div>
         </div>
@@ -170,25 +337,11 @@ Kita ciptakan damai bersama!
             <div class="tutorial-box">
                 <h4>📖 Tutorial Step-by-Step Kapwing Editor:</h4>
                 <ol class="step-list">
-                    <li>Klik tombol di atas untuk membuka web Kapwing.com.</li>
-                    <li>Klik <strong>"Sign In" / "Log In"</strong> -> pilih <strong>Continue with Google</strong>.</li>
-                    <li>Klik tombol <strong>"Create New Project"</strong> atau <strong>"Press to Upload"</strong>.</li>
-                    <li>Unggah semua bahan karyamu:
-                        <ul>
-                            <li>🎬 Video MP4 dari PixVerse (Misi 2)</li>
-                            <li>🖼️ Gambar 2 & 3 dari Gemini (Misi 1)</li>
-                            <li>🎵 Lagu MP3 dari Suno AI (Misi 3)</li>
-                        </ul>
-                    </li>
-                    <li>Seret (*drag & drop*) file ke bagian timeline di bawah:
-                        <ul>
-                            <li>Letakkan Video Animasi dan Gambar di trek paling atas.</li>
-                            <li>Letakkan Lagu MP3 di trek Audio di bawahnya.</li>
-                        </ul>
-                    </li>
-                    <li>Geser ujung gambar agar panjang durasinya sesuai dengan panjang lagunya.</li>
-                    <li>Jika sudah rapi, klik tombol <strong>"Export Project"</strong> di pojok kanan atas -> pilih format <strong>MP4</strong>.</li>
-                    <li>Tunggu proses rendering selesai, lalu klik <strong>Download</strong> untuk menyimpan karya utuhmu! 🎉</li>
+                    <li>Klik tombol di atas untuk membuka Kapwing.com -> masuk dengan <strong>Google</strong>.</li>
+                    <li>Klik <strong>"Create New Project"</strong> -> unggah Video PixVerse, Gambar Gemini, dan Lagu MP3 Suno.</li>
+                    <li>Tarik Video & Gambar ke trek atas, lalu tarik Lagu MP3 ke trek Audio di bawahnya.</li>
+                    <li>Atur panjang durasinya agar pas, lalu klik <strong>"Export Project"</strong> -> pilih <strong>MP4</strong>.</li>
+                    <li>Unduh videonya jika sudah selesai! 🎉</li>
                 </ol>
             </div>
         </div>
@@ -197,10 +350,9 @@ Kita ciptakan damai bersama!
         <div class="card mission-card" style="border: 2px solid #27ae60; background: #f0fff4;">
             <div class="mission-badge" style="background:#27ae60;">Misi Akhir</div>
             <h3>📤 Setor Hasil Karya Video Kamu</h3>
-            <p>Sudah selesai membuat videonya? Unggah file video hasil akhir dari Kapwing ke link di bawah ini:</p>
+            <p>Unggah file video hasil akhirnya ke Google Form di bawah ini:</p>
             
-            <!-- GANTI LINK GOOGLE FORM ANDA DI BAWAH INI -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScnkj0y_tpFSk4E_oz0wE6MiO_kPHDrY8D9pSn32V8uDFXRqA/viewform?usp=header" class="btn-link" style="background:#27ae60; font-size: 1.1rem; padding: 12px 25px;">📤 Klik Di Sini Untuk Upload Tugas</a>
+            <a href="PASTE_LINK_GOOGLE_FORM_ANDA_DI_SINI" target="_blank" class="btn-link" style="background:#27ae60; font-size: 1.1rem; padding: 12px 25px;">📤 Klik Di Sini Untuk Upload Tugas</a>
         </div>
     </main>
 
@@ -208,7 +360,6 @@ Kita ciptakan damai bersama!
         <p>Aplikasi Media Pembelajaran Akidah Akhlak Kelas 6 SD/MI &copy; 2026</p>
     </footer>
 
-    <!-- Script JavaScript -->
     <script>
         function copyPrompt(elementId) {
             const copyText = document.getElementById(elementId);
