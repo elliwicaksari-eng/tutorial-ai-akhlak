@@ -61,6 +61,22 @@ header h1 {
     font-size: 0.9rem;
 }
 
+.form-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 1rem;
+    flex: 1;
+}
+
 .btn-link {
     display: inline-block;
     background-color: #4A90E2;
@@ -108,35 +124,22 @@ button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 18px;
     border-radius: 8px;
     font-size: 0.9rem;
     cursor: pointer;
     font-family: inherit;
     font-weight: bold;
-    align-self: flex-start;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
-.user-profile {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 10px;
-    background: #eef9f1;
-    padding: 12px;
-    border-radius: 12px;
-    border: 1px solid #c8e6c9;
-}
-
-.user-profile img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid #4CAF50;
+.welcome-text {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #2E7D32;
 }
 
 footer {
