@@ -1,189 +1,24 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petualangan AI - Belajar Akidah Akhlak (Menahan Marah)</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Lucu & Ramah Anak dari Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+<!-- MISI 4: Penggabung Online di WeVideo -->
+<div class="card mission-card">
+    <div class="mission-badge" style="background:#2ED573; color:white;">Misi 4</div>
+    <h3>🎞️ Menggabungkan Gambar, Video & Musik di WeVideo</h3>
+    <p>Klik tombol di bawah ini untuk membuka WeVideo lalu masuk (*Sign In*) menggunakan akun <strong>Gmail</strong> kamu:</p>
+    
+    <a href="https://www.wevideo.com" target="_blank" class="btn-link" style="background:#008080;">🌐 Buka WeVideo Online Di Sini</a>
 
-    <!-- Header / Judul Utama -->
-    <header>
-        <div class="container">
-            <h1>🚀 Petualangan AI: Belajar Menahan Marah</h1>
-            <p>Mata Pelajaran: Akidah Akhlak Kelas 6 SD/MI</p>
-        </div>
-    </header>
-
-    <!-- Form Nama Siswa (Tanpa Login Password) -->
-    <section class="user-section container">
-        <div class="card">
-            <h2>👋 Selamat Datang, Teman-Teman!</h2>
-            <p>Masukkan nama dan kelasmu sebelum memulai petualangan AI ini:</p>
-            <div class="form-group">
-                <input type="text" id="studentName" placeholder="Ketik Namamu di sini...">
-                <input type="text" id="studentClass" placeholder="Kelas (contoh: 6A)" style="width: 150px;">
-                <button onclick="saveStudent()">Mulai Belajar ✨</button>
-            </div>
-            <p id="welcomeMessage" class="welcome-text"></p>
-        </div>
-    </section>
-
-    <!-- Ringkasan Materi -->
-    <section class="materi-section container">
-        <div class="card highlight-card">
-            <h2>📖 Materi Akidah Akhlak: Sifat Pemarah (Ghadhab)</h2>
-            <p><strong>Ghadhab</strong> adalah sifat pemarah yang berasal dari godaan setan. Orang yang hebat bukanlah orang yang menang bergulat, melainkan orang yang mampu <strong>menahan dirinya saat marah</strong>.</p>
-            <ul>
-                <li>🔴 <strong>Dampak Marah:</strong> Merusak pertemanan, membuat wajah tampak menakutkan, dan dibenci Allah.</li>
-                <li>🟢 <strong>Cara Meredakan Marah:</strong> Membaca Ta'awudz (<i>A'udzubillahi minasy syaitanir rajim</i>), mengambil wudu, dan mengubah posisi (duduk/berbaring).</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Tutorial Step by Step -->
-    <main class="container">
-        <h2>🛠️ Misi Tutorial AI Interaktif</h2>
-
-        <!-- MISI 1: Membuat 3 Gambar di Gemini -->
-        <div class="card mission-card">
-            <div class="mission-badge">Misi 1</div>
-            <h3>🎨 Membuat 3 Gambar Ekspresi di Gemini AI</h3>
-            <p>Buka <a href="https://gemini.google.com" target="_blank">Gemini AI (klik di sini)</a>, lalu salin prompt di bawah ini satu per satu untuk membuat 3 gambar:</p>
-
-            <!-- Gambar 1 -->
-            <div class="prompt-box">
-                <h4>Gambar 1: Ekspresi Orang Marah</h4>
-                <div class="visual-example">
-                    <img src="https://images.unsplash.com/photo-1541257710737-06967f1abb02?w=400&q=80" alt="Ilustrasi Marah">
-                    <p class="caption">Target visual: Anak dengan ekspresi marah/emosi</p>
-                </div>
-                <div class="code-container">
-                    <textarea id="prompt1" readonly>3D cartoon illustration of a 12-year-old boy with a red, angry face, clenched fists, and steam coming out of his ears, educational style, vibrant colors.</textarea>
-                    <button onclick="copyPrompt('prompt1')">📋 Salin Prompt 1</button>
-                </div>
-            </div>
-
-            <!-- Gambar 2 -->
-            <div class="prompt-box">
-                <h4>Gambar 2: Dampak Buruk Marah</h4>
-                <div class="visual-example">
-                    <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=400&q=80" alt="Kamar Berantakan">
-                    <p class="caption">Target visual: Suasana berantakan akibat emosi</p>
-                </div>
-                <div class="code-container">
-                    <textarea id="prompt2" readonly>3D Pixar-style illustration of a messy bedroom with broken toys on the floor, showing the sad consequences of throwing a temper tantrum.</textarea>
-                    <button onclick="copyPrompt('prompt2')">📋 Salin Prompt 2</button>
-                </div>
-            </div>
-
-            <!-- Gambar 3 -->
-            <div class="prompt-box">
-                <h4>Gambar 3: Cara Meredakan Marah (Wudu)</h4>
-                <div class="visual-example">
-                    <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?w=400&q=80" alt="Anak Berwudhu">
-                    <p class="caption">Target visual: Anak tenang setelah membasuh air/wudu</p>
-                </div>
-                <div class="code-container">
-                    <textarea id="prompt3" readonly>3D cartoon of a peaceful Muslim boy taking a deep breath and washing his face with water (wudu) to calm down, bright and friendly aesthetic.</textarea>
-                    <button onclick="copyPrompt('prompt3')">📋 Salin Prompt 3</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- MISI 2: Image to Video -->
-        <div class="card mission-card">
-            <div class="mission-badge">Misi 2</div>
-            <h3>🎬 Mengubah Gambar Menjadi Video Short (1 Kali)</h3>
-            <p>Pilih Gambar 1 (gambar anak marah) yang sudah kamu unduh tadi, lalu masukkan ke AI Video Generator untuk digerakkan:</p>
-            <div class="prompt-box">
-                <h4>Prompt Gerakan Video (Motion Prompt):</h4>
-                <div class="code-container">
-                    <textarea id="promptVideo" readonly>Animate the angry boy crossing his arms, huffing angrily with stomping feet, cartoon animation style.</textarea>
-                    <button onclick="copyPrompt('promptVideo')">📋 Salin Prompt Video</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- MISI 3: Suno AI Music -->
-        <div class="card mission-card">
-            <div class="mission-badge">Misi 3</div>
-            <h3>🎵 Membuat Lagu Edukasi di Suno AI</h3>
-            <p>Buka <a href="https://suno.com" target="_blank">Suno AI (klik di sini)</a>, aktifkan opsi <strong>Custom Mode</strong>, lalu tempel Style dan Lirik berikut:</p>
-
-            <div class="prompt-box">
-                <h4>1. Style of Music (Gaya Musik)</h4>
-                <div class="code-container">
-                    <textarea id="promptStyle" readonly style="height: 40px;">Children song, upbeat pop, cheerful ukulele, acoustic, inspiring, Indonesian lyrics</textarea>
-                    <button onclick="copyPrompt('promptStyle')">📋 Salin Style</button>
-                </div>
-
-                <h4 style="margin-top: 15px;">2. Lyrics (Lirik Lagu)</h4>
-                <div class="code-container">
-                    <textarea id="promptLirik" readonly style="height: 180px;">
-[Verse]
-Ketika dadamu terasa panas
-Jangan biarkan marah membakar
-Tahan emosi, ucapkan ta'awudz
-Senyum kembali, hati pun segar
-
-[Chorus]
-Anak hebat pandai menahan marah
-Wudu menyerap panasnya jiwa
-Sabar itu indah, disayang Allah
-Kita ciptakan damai bersama!
-                    </textarea>
-                    <button onclick="copyPrompt('promptLirik')">📋 Salin Lirik Lagu</button>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>Aplikasi Media Pembelajaran Akidah Akhlak Kelas 6 SD/MI &copy; 2026</p>
-    </footer>
-
-    <!-- Script JavaScript untuk Fungsi Interaktif -->
-    <script>
-        // Fungsi Salin Prompt ke Clipboard
-        function copyPrompt(elementId) {
-            const copyText = document.getElementById(elementId);
-            copyText.select();
-            copyText.setSelectionRange(0, 99999); // Untuk perangkat mobile
-            navigator.clipboard.writeText(copyText.value);
-            alert("✅ Prompt berhasil disalin! Silakan paste di website AI.");
-        }
-
-        // Fungsi Simpan Nama Siswa di LocalStorage Browser
-        function saveStudent() {
-            const name = document.getElementById('studentName').value;
-            const cls = document.getElementById('studentClass').value;
-            if (name && cls) {
-                localStorage.setItem('studentName', name);
-                localStorage.setItem('studentClass', cls);
-                showWelcome(name, cls);
-            } else {
-                alert("Harap isi nama dan kelas terlebih dahulu ya!");
-            }
-        }
-
-        function showWelcome(name, cls) {
-            document.getElementById('welcomeMessage').innerText = `Semangat Belajar, ${name} (Kelas ${cls})! Silakan ikuti tutorial di bawah ini. 👇`;
-        }
-
-        // Cek jika nama sudah pernah disimpan
-        window.onload = function() {
-            const savedName = localStorage.getItem('studentName');
-            const savedClass = localStorage.getItem('studentClass');
-            if (savedName && savedClass) {
-                document.getElementById('studentName').value = savedName;
-                document.getElementById('studentClass').value = savedClass;
-                showWelcome(savedName, savedClass);
-            }
-        };
-    </script>
-</body>
-</html>
+    <div class="prompt-box">
+        <h4>📌 Panduan Mudah di WeVideo:</h4>
+        <ol style="margin-left: 20px; line-height: 1.8;">
+            <li>Klik tombol <strong>"Create New"</strong> lalu pilih <strong>Video Editor</strong>.</li>
+            <li>Unggah file kamu:
+                <ul>
+                    <li>🖼️ Gambar dari Gemini (Misi 1)</li>
+                    <li>🎬 Video Animasi dari Google Vids (Misi 2)</li>
+                    <li>🎵 Lagu MP3 dari Suno AI (Misi 3)</li>
+                </ul>
+            </li>
+            <li>Tarik (*drag & drop*) Video dan Gambar ke trek <strong>Video</strong>, lalu tarik Lagu MP3 ke trek <strong>Audio</strong> di bagian bawah.</li>
+            <li>Sesuaikan urutan dan durasinya, lalu klik <strong>Finish / Export</strong> di pojok kanan atas! 🎉</li>
+        </ol>
+    </div>
+</div>
