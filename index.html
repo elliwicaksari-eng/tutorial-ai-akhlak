@@ -1,24 +1,199 @@
-<!-- MISI 4: Penggabung Online di WeVideo -->
-<div class="card mission-card">
-    <div class="mission-badge" style="background:#2ED573; color:white;">Misi 4</div>
-    <h3>🎞️ Menggabungkan Gambar, Video & Musik di WeVideo</h3>
-    <p>Klik tombol di bawah ini untuk membuka WeVideo lalu masuk (*Sign In*) menggunakan akun <strong>Gmail</strong> kamu:</p>
-    
-    <a href="https://www.wevideo.com" target="_blank" class="btn-link" style="background:#008080;">🌐 Buka WeVideo Online Di Sini</a>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petualangan AI - Akidah Akhlak Kelas 6</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Sign-In Library -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
 
-    <div class="prompt-box">
-        <h4>📌 Panduan Mudah di WeVideo:</h4>
-        <ol style="margin-left: 20px; line-height: 1.8;">
-            <li>Klik tombol <strong>"Create New"</strong> lalu pilih <strong>Video Editor</strong>.</li>
-            <li>Unggah file kamu:
-                <ul>
-                    <li>🖼️ Gambar dari Gemini (Misi 1)</li>
-                    <li>🎬 Video Animasi dari Google Vids (Misi 2)</li>
-                    <li>🎵 Lagu MP3 dari Suno AI (Misi 3)</li>
-                </ul>
-            </li>
-            <li>Tarik (*drag & drop*) Video dan Gambar ke trek <strong>Video</strong>, lalu tarik Lagu MP3 ke trek <strong>Audio</strong> di bagian bawah.</li>
-            <li>Sesuaikan urutan dan durasinya, lalu klik <strong>Finish / Export</strong> di pojok kanan atas! 🎉</li>
-        </ol>
-    </div>
-</div>
+    <!-- Header / Judul Utama -->
+    <header>
+        <div class="container">
+            <h1>🚀 Petualangan AI: Belajar Menahan Marah</h1>
+            <p>Mata Pelajaran: Akidah Akhlak Kelas 6 SD/MI</p>
+        </div>
+    </header>
+
+    <!-- Fitur Login Gmail -->
+    <section class="user-section container">
+        <div class="card login-card">
+            <h2>👋 Selamat Datang! Ayo Masuk dengan Gmail</h2>
+            <p>Gunakan akun Gmail baru yang sudah kamu buat untuk memulai petualangan ini:</p>
+            
+            <div id="g_id_onload"
+                 data-client_id="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
+                 data-callback="handleCredentialResponse">
+            </div>
+            <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline" data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left"></div>
+
+            <div id="userProfile" class="user-profile" style="display: none;">
+                <img id="userAvatar" src="" alt="Foto Profil">
+                <div>
+                    <h3 id="userName">Nama Siswa</h3>
+                    <p id="userEmail" class="welcome-text">Selamat belajar!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ringkasan Materi Akidah Akhlak -->
+    <section class="materi-section container">
+        <div class="card highlight-card">
+            <h2>📖 Materi Akidah Akhlak: Sifat Pemarah (Ghadhab)</h2>
+            <p><strong>Ghadhab</strong> adalah sifat pemarah yang berasal dari godaan setan. Orang yang hebat bukanlah orang yang kuat bergulat, melainkan orang yang mampu <strong>menahan dirinya saat marah</strong>.</p>
+            <ul>
+                <li>🔴 <strong>Dampak Marah:</strong> Merusak pertemanan, membuat wajah tampak menakutkan, dan dibenci Allah.</li>
+                <li>🟢 <strong>Cara Meredakan Marah:</strong> Membaca Ta'awudz (<i>A'udzubillahi minasy syaitanir rajim</i>), mengambil air wudu, dan merubah posisi tubuh.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Misi Tutorial AI -->
+    <main class="container">
+        <h2>🛠️ Misi Tutorial AI Interaktif</h2>
+
+        <!-- MISI 1: GEMINI AI -->
+        <div class="card mission-card">
+            <div class="mission-badge">Misi 1</div>
+            <h3>🎨 Buat 3 Gambar Ekspresi di Gemini AI</h3>
+            <p>Klik tombol di bawah ini untuk membuka Gemini AI di tab baru:</p>
+            <a href="https://gemini.google.com" target="_blank" class="btn-link">🌐 Buka Gemini AI Di Sini</a>
+
+            <!-- Gambar 1 -->
+            <div class="prompt-box">
+                <h4>1. Gambar Ekspresi Orang Marah</h4>
+                <div class="code-container">
+                    <textarea id="prompt1" readonly>3D cartoon illustration of a 12-year-old boy with a red, angry face, clenched fists, and steam coming out of his ears, educational style, vibrant colors.</textarea>
+                    <button onclick="copyPrompt('prompt1')">📋 Salin Prompt 1</button>
+                </div>
+            </div>
+
+            <!-- Gambar 2 -->
+            <div class="prompt-box">
+                <h4>2. Gambar Dampak Buruk Marah</h4>
+                <div class="code-container">
+                    <textarea id="prompt2" readonly>3D Pixar-style illustration of a messy bedroom with broken toys on the floor, showing the sad consequences of throwing a temper tantrum.</textarea>
+                    <button onclick="copyPrompt('prompt2')">📋 Salin Prompt 2</button>
+                </div>
+            </div>
+
+            <!-- Gambar 3 -->
+            <div class="prompt-box">
+                <h4>3. Gambar Meredakan Marah (Berwudu)</h4>
+                <div class="code-container">
+                    <textarea id="prompt3" readonly>3D cartoon of a peaceful Muslim boy taking a deep breath and washing his face with water (wudu) to calm down, bright and friendly aesthetic.</textarea>
+                    <button onclick="copyPrompt('prompt3')">📋 Salin Prompt 3</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MISI 2: GOOGLE VIDS -->
+        <div class="card mission-card">
+            <div class="mission-badge">Misi 2</div>
+            <h3>🎬 Ubah Gambar Jadi Video di Google Vids</h3>
+            <p>Buka Google Vids dengan akun Gmail-mu, unggah <strong>Gambar 1 (Anak Marah)</strong> lalu animasi video:</p>
+            <a href="https://vids.new" target="_blank" class="btn-link">🌐 Buka Google Vids Di Sini</a>
+
+            <div class="prompt-box">
+                <h4>Prompt Gerakan Video (Motion Prompt):</h4>
+                <div class="code-container">
+                    <textarea id="promptVideo" readonly>Animate the angry boy crossing his arms, huffing angrily with stomping feet, cartoon animation style.</textarea>
+                    <button onclick="copyPrompt('promptVideo')">📋 Salin Prompt Video</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MISI 3: SUNO AI -->
+        <div class="card mission-card">
+            <div class="mission-badge">Misi 3</div>
+            <h3>🎵 Buat Lagu Edukasi di Suno AI</h3>
+            <p>Klik tombol di bawah ini untuk membuka Suno AI (Aktifkan opsi <strong>Custom Mode</strong>):</p>
+            <a href="https://suno.com" target="_blank" class="btn-link">🌐 Buka Suno AI Di Sini</a>
+
+            <div class="prompt-box">
+                <h4>1. Style of Music (Gaya Musik)</h4>
+                <div class="code-container">
+                    <textarea id="promptStyle" readonly style="height: 40px;">Children song, upbeat pop, cheerful ukulele, acoustic, inspiring, Indonesian lyrics</textarea>
+                    <button onclick="copyPrompt('promptStyle')">📋 Salin Style</button>
+                </div>
+
+                <h4 style="margin-top: 15px;">2. Lyrics (Lirik Lagu)</h4>
+                <div class="code-container">
+                    <textarea id="promptLirik" readonly style="height: 160px;">
+[Verse]
+Ketika dadamu terasa panas
+Jangan biarkan marah membakar
+Tahan emosi, ucapkan ta'awudz
+Senyum kembali, hati pun segar
+
+[Chorus]
+Anak hebat pandai menahan marah
+Wudu menyerap panasnya jiwa
+Sabar itu indah, disayang Allah
+Kita ciptakan damai bersama!
+                    </textarea>
+                    <button onclick="copyPrompt('promptLirik')">📋 Salin Lirik Lagu</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MISI 4: WEVIDEO -->
+        <div class="card mission-card">
+            <div class="mission-badge" style="background:#008080;">Misi 4</div>
+            <h3>🎞️ Penggabung Video & Musik di WeVideo</h3>
+            <p>Buka WeVideo, lalu masuk (*Sign In*) menggunakan akun Gmail kamu untuk menggabungkan semua karya:</p>
+            <a href="https://www.wevideo.com" target="_blank" class="btn-link" style="background:#008080;">🌐 Buka WeVideo Online</a>
+
+            <div class="prompt-box">
+                <h4>📌 Panduan Mudah di WeVideo:</h4>
+                <ol style="margin-left: 20px; line-height: 1.8;">
+                    <li>Klik <strong>Create New</strong> -> pilih <strong>Video Editor</strong>.</li>
+                    <li>Unggah <strong>Gambar dari Gemini</strong>, <strong>Video dari Google Vids</strong>, dan <strong>Lagu dari Suno AI</strong>.</li>
+                    <li>Tarik Gambar dan Video ke trek <strong>Video</strong>, lalu tarik Lagu MP3 ke trek <strong>Audio</strong>.</li>
+                    <li>Atur durasi hingga pas, lalu klik <strong>Finish / Export</strong> di pojok kanan atas! 🎉</li>
+                </ol>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Aplikasi Media Pembelajaran Akidah Akhlak Kelas 6 SD/MI &copy; 2026</p>
+    </footer>
+
+    <!-- Script JavaScript untuk Salin Prompt & Login -->
+    <script>
+        function copyPrompt(elementId) {
+            const copyText = document.getElementById(elementId);
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+            alert("✅ Prompt berhasil disalin! Silakan paste di platform AI.");
+        }
+
+        function parseJwt (token) {
+            var base64Url = token.split('.')[1];
+            var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+            var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+            return JSON.parse(jsonPayload);
+        }
+
+        function handleCredentialResponse(response) {
+            const data = parseJwt(response.credential);
+            document.querySelector('.g_id_signin').style.display = 'none';
+            
+            const userProfile = document.getElementById('userProfile');
+            document.getElementById('userAvatar').src = data.picture;
+            document.getElementById('userName').innerText = "Selamat Datang, " + data.name + "!";
+            document.getElementById('userEmail').innerText = "Akun: " + data.email;
+            userProfile.style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
